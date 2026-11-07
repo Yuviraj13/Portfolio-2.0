@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1120">
+  <meta name="description" content="Yuvraj Chauhan — Business Central Technical Consultant focused on AL development, ERP customization, posting routines, reporting, and data validation.">
+  <title>Yuvraj Chauhan | Business Central & AL Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Yuvraj Chauhan home">Yuvraj &nbsp; Chauhan<span>.</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a class="nav-contact" href="#contact">Contact <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section" id="home">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="container hero-layout">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="status-dot"></span> Business Central · AL Development</div>
+          <p class="kicker">Hello, I'm Yuvraj Chauhan</p>
+          <h1>I turn Business requirements into <span class="gradient-text">Practical ERP solutions.</span></h1>
+          <p class="hero-summary">A Technical Consultant focused on Microsoft Dynamics 365 Business Central and Dynamics NAV—building AL customizations, improving document workflows, and tracing data through posting processes.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">Explore my work <span aria-hidden="true">↘</span></a>
+            <a class="button button-secondary" href="#contact">Get in touch</a>
+          </div>
+          <div class="hero-tags" aria-label="Core focus areas">
+            <span>AL</span><span>Codeunits</span><span>Event Subscribers</span><span>Posting & Ledgers</span>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Illustrative AL code sample">
+          <div class="editor-window">
+            <div class="editor-topbar">
+              <div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+              <span class="editor-filename">CustomerChangeLogger.al</span>
+              <span class="editor-language">AL</span>
+            </div>
+            <div class="editor-content">
+              <div class="code-line"><span class="line-no">01</span><code><span class="syntax-purple">codeunit</span> <span class="syntax-number">50108</span> <span class="syntax-string">"Customer Change Logger"</span></code></div>
+              <div class="code-line"><span class="line-no">02</span><code>{</code></div>
+              <div class="code-line"><span class="line-no">03</span><code>  [<span class="syntax-blue">EventSubscriber</span>(ObjectType::Table,</code></div>
+              <div class="code-line"><span class="line-no">04</span><code>   Database::Customer, <span class="syntax-string">'OnAfterModifyEvent'</span>,</code></div>
+              <div class="code-line"><span class="line-no">05</span><code>   <span class="syntax-string">''</span>, <span class="syntax-purple">false</span>, <span class="syntax-purple">false</span>)]</code></div>
+              <div class="code-line"><span class="line-no">06</span><code>  <span class="syntax-purple">local procedure</span> LogCustomerChanges(</code></div>
+              <div class="code-line"><span class="line-no">07</span><code>    <span class="syntax-purple">var</span> Rec: <span class="syntax-blue">Record</span> Customer;</code></div>
+              <div class="code-line"><span class="line-no">08</span><code>    <span class="syntax-purple">var</span> xRec: <span class="syntax-blue">Record</span> Customer;</code></div>
+              <div class="code-line"><span class="line-no">09</span><code>    RunTrigger: Boolean)</code></div>
+              <div class="code-line"><span class="line-no">10</span><code>  <span class="syntax-purple">begin</span></code></div>
+              <div class="code-line highlighted"><span class="line-no">11</span><code>    <span class="syntax-purple">if</span> Rec.Name &lt;&gt; xRec.Name <span class="syntax-purple">then</span></code></div>
+              <div class="code-line"><span class="line-no">12</span><code>      CreateChangeLog(...);</code></div>
+              <div class="code-line"><span class="line-no">13</span><code>  <span class="syntax-purple">end</span>;</code></div>
+              <div class="code-line"><span class="line-no">14</span><code>}</code></div>
+            </div>
+            <div class="editor-status"><span><i></i> AL workspace</span><span>Record changes · Audit trail</span></div>
+          </div>
+          <div class="floating-note"><span class="note-icon">↳</span><span><strong>Traceable changes</strong><small>Old value → New value</small></span></div>
+        </div>
+      </div>
+      <div class="container hero-bottom reveal">
+        <span class="scroll-label">Scroll to explore</span><span class="scroll-line"></span><span class="hero-bottom-text">Tables · Pages · Reports · Codeunits · Events</span>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-heading reveal"><p class="section-label">01 / About</p><h2>Business processes first.<br><span class="muted-heading">Clean AL code behind them.</span></h2></div>
+        <div class="about-grid">
+          <div class="about-copy reveal">
+            <p class="lead">I'm a Business Central Technical Consultant with a Computer Science background and a specialization in Artificial Intelligence.</p>
+            <p>My focus is turning practical business requirements into maintainable customizations in Microsoft Dynamics 365 Business Central and Dynamics NAV. I work with AL objects, record processing, standard document flows, posting events, reports, and data-validation routines.</p>
+            <p>I enjoy understanding <em>why</em> a transaction behaves a certain way—not just making the code compile. That means tracing records, using the debugger, and making sure custom fields follow the right business documents and ledger entries.</p>
+          </div>
+          <div class="about-cards reveal">
+            <article class="info-card"><span class="info-index">A</span><div><h3>Education</h3><p>B.Tech · Computer Science Engineering</p><span>Specialization in Artificial Intelligence</span></div></article>
+            <article class="info-card"><span class="info-index">B</span><div><h3>Primary focus</h3><p>Business Central / AL</p><span>Customization, posting, reports and troubleshooting</span></div></article>
+            <article class="info-card"><span class="info-index">C</span><div><h3>Development approach</h3><p>Understand → Build → Debug</p><span>Readable code and standard BC business logic</span></div></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-heading reveal"><p class="section-label">02 / Skills</p><h2>The tools I use to <span class="muted-heading">solve ERP problems.</span></h2><p class="section-intro">A practical skill set centred on AL development and the Business Central application layer.</p></div>
+        <div class="skill-grid">
+          <article class="skill-card reveal"><div class="skill-card-top"><span class="skill-icon">{ }</span><span class="skill-count">01</span></div><h3>AL Development</h3><p>Tables, keys, TableRelation, pages, page extensions, reports, procedures, codeunits, record variables and field validation.</p><div class="chip-list"><span>AL</span><span>C/AL</span><span>Local & Public Procedures</span><span>var Parameters</span></div></article>
+          <article class="skill-card reveal"><div class="skill-card-top"><span class="skill-icon">⇄</span><span class="skill-count">02</span></div><h3>Events & Posting</h3><p>Event publishers/subscribers, custom field propagation and tracing sales, purchase and transfer posting routines.</p><div class="chip-list"><span>EventSubscriber</span><span>Sales / Purchase</span><span>Transfer Orders</span><span>Ledger Flow</span></div></article>
+          <article class="skill-card reveal"><div class="skill-card-top"><span class="skill-icon">▤</span><span class="skill-count">03</span></div><h3>Data & Reporting</h3><p>CSV import, XMLports, request pages, report datasets, DataItemLink, Excel Buffer concepts and filters.</p><div class="chip-list"><span>XMLport</span><span>CSV</span><span>Excel Buffer</span><span>RDLC / Report Dataset</span></div></article>
+          <article class="skill-card reveal"><div class="skill-card-top"><span class="skill-icon">◈</span><span class="skill-count">04</span></div><h3>Business Central / NAV</h3><p>Working knowledge of core sales, purchase, inventory, GST and finance processes, with a focus on troubleshooting and data flow.</p><div class="chip-list"><span>Business Central</span><span>NAV 2016</span><span>GST</span><span>G/L & Subledgers</span></div></article>
+        </div>
+        <div class="tool-strip reveal"><span class="tool-strip-label">Supporting tools</span><div class="tool-items"><span>VS Code</span><span>Git & GitHub</span><span>SQL</span><span>HTML</span><span>CSS</span><span>JavaScript</span></div></div>
+      </div>
+    </section>
+
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-heading reveal"><p class="section-label">03 / Selected work</p><h2>Practical projects.<br><span class="muted-heading">Real ERP concepts.</span></h2><p class="section-intro">Examples of the Business Central customizations and practice implementations I have been building.</p></div>
+        <div class="projects-grid">
+          <article class="project-card project-featured reveal">
+            <div class="project-topline"><span class="project-type">AL · EVENT-DRIVEN</span><span class="project-number">01</span></div>
+            <h3>Custom fields across posting</h3>
+            <p>Carry custom comments and fields from source documents through posting into posted documents and related ledger entries, using event subscribers where suitable.</p>
+            <div class="project-flow"><span>Source document</span><b>→</b><span>Posting events</span><b>→</b><span>Posted data</span></div>
+            <div class="chip-list"><span>Table Extensions</span><span>Codeunits</span><span>Event Subscribers</span></div>
+            <details class="project-details"><summary>Project notes</summary><p>Explores standard posting routines, matching source and posted records, and preserving custom data without modifying base application objects.</p></details>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-topline"><span class="project-type">DATA PROCESSING</span><span class="project-number">02</span></div>
+            <h3>Sales & purchase staging import</h3>
+            <p>Import CSV data into staging header/line tables, validate values, group lines by document, protect against duplicates, and create standard documents.</p>
+            <div class="chip-list"><span>XMLport</span><span>Record Filters</span><span>Validation</span><span>Posting</span></div>
+            <details class="project-details"><summary>Project notes</summary><p>Includes header/line relationships, customer/vendor existence checks, temporary records for missing masters, line amount handling, and tracking created/posted document numbers.</p></details>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-topline"><span class="project-type">AUDIT TRAIL</span><span class="project-number">03</span></div>
+            <h3>Customer change logger</h3>
+            <p>Capture old and new values when selected Customer fields change, then store the change, user ID and timestamp in a custom log table.</p>
+            <div class="chip-list"><span>OnAfterModifyEvent</span><span>Rec / xRec</span><span>Local Procedures</span></div>
+            <details class="project-details"><summary>Project notes</summary><p>Compares Rec and xRec for fields such as Name and Credit Limit, then calls a reusable CreateChangeLog procedure. Additional fields can be tracked by adding comparisons.</p></details>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-topline"><span class="project-type">REPORTING · GST</span><span class="project-number">04</span></div>
+            <h3>GST-focused document reports</h3>
+            <p>Build report datasets for sales documents with customer, item, quantity, amounts and GST component details where available in the environment.</p>
+            <div class="chip-list"><span>Report DataItems</span><span>DataItemLink</span><span>Tax Transaction Value</span></div>
+            <details class="project-details"><summary>Project notes</summary><p>Practices header-to-line linking, report filters, component lookup and calculating CGST, SGST, IGST and totals using the configured tax data.</p></details>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-topline"><span class="project-type">STANDARD DOCUMENTS</span><span class="project-number">05</span></div>
+            <h3>Sales & purchase workflow customization</h3>
+            <p>Extend standard document pages and tables to support custom fields and operational requirements in sales, purchases and transfer orders.</p>
+            <div class="chip-list"><span>Page Extensions</span><span>Table Extensions</span><span>Triggers</span></div>
+            <details class="project-details"><summary>Project notes</summary><p>Focuses on field validation, header/line relationships, safe record modification, and using standard BC business logic rather than directly assigning values everywhere.</p></details>
+          </article>
+          <article class="project-card project-next reveal">
+            <span class="next-symbol">+</span><p class="project-type">CONTINUOUS LEARNING</p><h3>Always improving the fundamentals</h3><p>Practising record methods, filters, local/public procedures, value vs. var parameters, page and table triggers, event signatures and debugging.</p><a href="#contact" class="text-link">Let's connect <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+        <p class="project-disclaimer">Project descriptions reflect personal development and practice work; add repository links or screenshots only for work you are permitted to share.</p>
+      </div>
+    </section>
+
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-heading reveal"><p class="section-label">04 / Experience & education</p><h2>Building skills through <span class="muted-heading">hands-on ERP work.</span></h2></div>
+        <div class="timeline">
+          <article class="timeline-item reveal"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-meta"><span class="timeline-type">CURRENT ROLE</span><span>Company and dates can be added before publishing</span></div><h3>Trainee Technical Consultant</h3><h4>Microsoft Dynamics 365 Business Central / AL</h4><ul><li>Work with AL objects such as tables, pages, reports, codeunits and event subscribers.</li><li>Investigate Sales, Purchase and Transfer document flows, posting routines and related ledger data.</li><li>Build and troubleshoot custom fields, CSV staging processes, document creation logic and report datasets.</li></ul></div></article>
+          <article class="timeline-item reveal"><div class="timeline-marker"></div><div class="timeline-content"><div class="timeline-meta"><span class="timeline-type">EDUCATION</span><span>Computer Science</span></div><h3>B.Tech — Computer Science Engineering</h3><h4>Specialization in Artificial Intelligence</h4><p>Foundation in programming and software engineering, applied to ERP development and problem-solving.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container contact-layout">
+        <div class="contact-copy reveal"><p class="section-label">05 / Contact</p><h2>Let's talk about <span class="gradient-text">Business Central.</span></h2><p>For AL development, ERP customization, troubleshooting or suitable opportunities, use the contact links after adding your details below.</p></div>
+        <div class="contact-card reveal">
+          <a class="contact-row" href="mailto:chauhanyuvraj1303@gmail.com"><span class="contact-icon">✉</span><span><small>Email</small><strong>chauhanyuvraj1303@gmail.com</strong></span><span class="contact-arrow">↗</span></a>
+          <a class="contact-row" href="https://www.linkedin.com/in/yuvraj-chauhan-382025294/" target="_blank" rel="noopener noreferrer"><span class="contact-icon">in</span><span><small>LinkedIn</small><strong>Yuvraj Chauhan</strong></span><span class="contact-arrow">↗</span></a>
+          <a class="contact-row" href="https://github.com/Yuviraj13" target="_blank" rel="noopener noreferrer"><span class="contact-icon">⌘</span><span><small>GitHub</small><strong>Yuviraj13</strong></span><span class="contact-arrow">↗</span></a>
+          <!-- <code>index.html</code> -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner"><a class="brand" href="#home">Yuvraj &nbsp; Chauhan<span>.</span></a><p>Designed around Business Central, AL and practical ERP problem-solving.</p><div class="footer-right"><span>© <span id="current-year"></span> Yuvraj Chauhan</span><a href="#top" class="back-to-top">Back to top ↑</a></div></div>
+  </footer>
+</body>
+</html>
